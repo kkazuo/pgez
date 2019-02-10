@@ -1,0 +1,22 @@
+opam-version: "2.0"
+version: "0.0.1"
+maintainer: "Koga Kazuo <obiwanko@me.com>"
+authors: ["Koga Kazuo <obiwanko@me.com>"]
+homepage: "https://github.com/kkazuo/pgez"
+dev-repo: "git+https://github.com/kkazuo/pgez.git"
+bug-reports: "git+https://github.com/kkazuo/pgez/issues"
+tags: [ "postgresql" ]
+license: "ISC"
+synopsis: "Eazy wrapper of postgresql"
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "core_kernel" {>= "v0.11.0"}
+  "cstruct"     {>= "3.3.0"}
+  "ipaddr"      {>= "3.0.0"}
+  "postgresql"  {>= "4.4.1"}
+  "uuidm"       {>= "0.9.6"}
+  "yojson"      {>= "1.6.0"}
+  "dune"        {build & >= "1.6"}
+]
