@@ -2,10 +2,10 @@
  (name pgez)
  (public_name pgez)
  (modules pgez)
- (preprocess (pps ppx_jane ppx_deriving_yojson))
+ (preprocess (pps ppx_jane))
  (libraries core_kernel
             cstruct
             ipaddr
             postgresql
             uuidm
-            yojson ppx_deriving_yojson))
+            yojson))
